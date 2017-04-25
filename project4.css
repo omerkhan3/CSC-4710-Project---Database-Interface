@@ -1,0 +1,62 @@
+body{
+    background-color: lightblue;
+    text-align: center;
+}
+
+.sample{
+	text-decoration: none;
+	color: black;
+}
+
+
+.populationButton, .textBoxButton{
+  overflow: hidden;
+  position: relative;
+  margin: 10px;
+  padding: 10px 30px;
+  border: 1px solid #F85F5F;
+  background-repeat: repeat-x;
+  font-weight: bold;
+  font-size: 13px;
+  color: #fff;
+  cursor: pointer;
+  &:active;
+  background-color: #FA8181;
+  background-image: none;
+}
+
+
+.populationButton:hover, .textBoxButton:hover {
+    background-color: #fff; /* Green */
+    color: #FA8181;
+}
+
+
+h2{
+	color: #FA8181;
+}
+
+h1{
+	margin: 0;
+	color: #FA8181;
+	font-family: courier new;
+}
+
+.queryButton, .relationButton{
+	margin-bottom: 5px;
+}
+
+#queryBox{
+	margin-bottom: 10px;
+	margin-left: 20px;
+}
+
+.section{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+
+.projectTitle{
+	font-size:35px;
+}
