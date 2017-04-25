@@ -5,31 +5,27 @@ include("phpfunctions.php");
 //Get a connection to the database. The way we are calling it recycles already existing connections.
 $conn = connectToDatabase();
 
-//Get the query entered by the user in the query box. Extract it from the form data of the HTTP POST Method.
+//Get the query entered by the user in the query box. 
 
 $query = $_POST["queryBox"];
 
-//Run the query. Display results if no error. See http://php.net/manual/en/mysqli.multi-query.php.
-//http://stackoverflow.com/questions/15251095/display-data-from-sql-database-into-php-html-table was also used.
+
 
 
 
 
 if ($conn->multi_query($query)) {
-	//Some style information. See https://www.w3schools.com/html/html_tables.asp
 	echo "<style>" . "table, th, td {" . "border: 1px solid black;" . "border-collapse: collapse;" . "th, td {" . 
 		"padding: 15px;" . "}" . "</style>";
 	do {
-		//See https://www.w3schools.com/html/html_tables.asp about creating tables
 		echo "<table style=\"width:100%\">"; //Open an html table
-		/* store first result set See http://php.net/manual/en/class.mysqli-result.php and http://php.net/manual/en/mysqli.store-result.php*/
 		if ($result = $conn->store_result()) {
 			//Fetch all of the fields (corresponds to "columns") objects as an array
 			$fields = $result->fetch_fields();
 			echo "<tr>"; //Begin creating a row for the column headers
-			//Iterate over the fields array. See http://php.net/manual/en/control-structures.foreach.php
+			//Iterate over the fields array. 
 			foreach ($fields as &$field){
-				//<th> is for table header. Period is for concatentation. name gets the name of the field (column).
+				
 			
 				switch($field->type){
 					case '254':
@@ -50,18 +46,17 @@ if ($conn->multi_query($query)) {
 
 				echo "<th>" . $field->name . " (" . $fieldtype. ")</th>";
 			}
-			echo "</tr>"; //Done creating table columns row
+			echo "</tr>"; 
 
 			//Print out the actual table data. Fetch each table row.
 			while ($row = $result->fetch_row()) {
 				echo "<tr>"; //Begin creating a row for table data as opposed to header.
 				foreach ($row as &$rowData){
-					//<td> is for table data. Period is for concatentation. $rowData would be one data value in a row.
 					echo "<td>" . $rowData ."</td>";
 				}
 				echo "</tr>"; //Finished a row
 			}
-			$result->free(); //Clean up after ourselves
+			$result->free(); 
 		}
 		echo "</table>"; //Close the html table	
 		/* print divider */
