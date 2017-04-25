@@ -4,15 +4,12 @@ A webpage created with the WAMP (Windows, Apache, MySQL, PHP) stack designed to 
 
 Instructions to Set Up/Test:
 
-1.  Install EasyPHP from the link provided by Dr. Judeh.
+1.  Install EasyPHP..
 2.  Start HTTP Server and Database Server from Dashboard.  Make sure local MySQL service is not running.
-3.  Make sure the directory in the dashboard points to our folder.  For us, we simply used the eds-www folder provided by Dr. Judeh.
+3.  Make sure the directory in the dashboard points to our folder.  For us, we simply used the eds-www folder.
 4.  Under databases, create one called project2.  
 5.  Once configured, go to 127.0.0.1 to access index.php.  We made all of our changes via the local files in our text editor. 
-6.  I configured the PHP given by Dr. Judeh to load our SQL files from Project 2 as the default data in the database when the index loads.
-7.  Ad-hoc queries correspond to 'runQuery.php', relations correspond to 'Relations.php', the queries correspond 'Queries.php', and Populate/Clear database
-correspond to "populationButtons.php".  Each of those PHP files handle the POST requests of the respective buttons.
-8.  'project4.css' corresponds to the style changes.
-9.  To test, you can run the any of the buttons or the ad-hoc queries and the proper results will display on a new tab.  Each heading will also contain the 
-data type of the column.
-10. You can also test the Clear/Populate database, and can run the queries again to observe the results to be empty/showing respectively.
+6.  Ad-hoc queries correspond to 'runQuery.php', relations correspond to 'Relations.php', the queries correspond 'Queries.php', and Populate/Clear database correspond to "populationButtons.php".  Each of those PHP files handle the POST requests of the respective buttons.
+7.  'project4.css' corresponds to the style changes.
+8.  To test, you can run the any of the buttons or the ad-hoc queries and the proper results will display on a new tab.  Each heading will also contain the data type of the column.
+9. You can also test the Clear/Populate database, and can run the queries again to observe the results to be empty/showing respectively.
