@@ -2,18 +2,11 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 
-<!--
-HTML Comments are included in these tags. PHP comments use // and other mechanisms.
--->
 
-<!-- We need to throw in some JavaScript as well. PHP is for the server side of things. 
-Javascript is for the client, i.e., browser, side of things. 
-See https://www.w3schools.com/js/default.asp for more infromation.
--->
 <script src = "javascriptfunctions.js"></script>
 
 
-<!-- Connect to our MySQL database. Code snippet from https://www.w3schools.com/php/php_mysql_connect.asp-->
+
 <?php
 	//Make available a list of functions in phpfunctions
 	include("phpfunctions.php");
@@ -33,12 +26,7 @@ See https://www.w3schools.com/js/default.asp for more infromation.
 	<h1 class = "projectTitle"> Project 4 </h1>
 	<h1> By: Omer Khan & Ridwan Khan </h1>
 	<hr>
-	<h1>
-		<!-- An example in php to say hello world. -->
-		<!-- <?php
-		//echo "Hello World!";
-		?> -->
-	</h1>
+
 
 
 </div>
@@ -107,15 +95,11 @@ See https://www.w3schools.com/js/default.asp for more infromation.
 	</div>
 	
 	<hr>
-	<!-- See https://www.w3schools.com/php/php_forms.asp for more information
-		HTML form to simulate a button. By no means ideal, but gets the job done.
-		This form is used to call a php file, which in turn runs the query specified.
-		The target = "_blank" stuff is important to display into a new webpage. -->
+
 	<div id = AdHocSection class = "section">
 	<h2 id = "AdHocTitle" class = "title"> Ad-Hoc Query </h2>
 	<form action = "runQuery.php" method="post" target = "_blank">
-		<strong>Please enter your query below: </strong> <br/> <!-- <br/> is a new line -->
-		<!-- Need the ID to refer to it in the javascript function -->
+		<strong>Please enter your query below: </strong> <br/> 
 		<textarea name="queryBox" rows="20" cols="100" id = "queryBox"></textarea><br/>
 		<button class = "textBoxButton" type = "button" onClick="clearTextArea();">Clear</button>
 		<input class = "textBoxButton" type = "submit">
